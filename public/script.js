@@ -85,7 +85,8 @@ function deleteExpense(id) {
 
 function renderExpenses(expenses) {
     alert("Rendering expenses...");
-    
+    const totalExpense = expenses.reduce((sum, expense) => sum + expense.amount, 0);
+    $("#total-expense").text(totalExpense.toFixed(2));
     const expenseRows = expenses
     
         .map((expense) => `
