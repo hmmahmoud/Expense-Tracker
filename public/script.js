@@ -105,5 +105,9 @@ function renderExpenses(expenses) {
         $("#expenses").html(expenseRows);
 }
 
+$("#export-csv").on("click", function () {
+    window.location.href = `${API_URL}/export/csv`
+});
+
 fetchExpenses();
 

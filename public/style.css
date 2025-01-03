@@ -111,3 +111,29 @@ button:hover {
         padding: 8px;
     }
 }
+
+#export-csv {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3 ease;
+
+    display: block;
+    margin: 20px auto;
+}
+
+#export-csv:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 8px rgba(0, 0,0, 0.2);
+}
+
+#export-csv:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.65;
+}
