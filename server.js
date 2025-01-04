@@ -1,7 +1,13 @@
-import express from "express";
-import bodyParser from "body-parser";
-import  cors from "cors";
-import router from "./routes/expenseRoutes.js";
+// import express from "express";
+// import bodyParser from "body-parser";
+// import  cors from "cors";
+// import router from "./routes/expenseRoutes.js";
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const router = require('./routes/expenseRoutes');
+
 
 const app = express();
 

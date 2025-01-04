@@ -1,9 +1,17 @@
-import express from "express";
-import db from "../db/databases.js";
-import { Parser } from "json2csv";
-import ExcelJS from "exceljs"
+// import express from "express";
+// import db from "../db/databases.js";
+// import { Parser } from "json2csv";
+// import ExcelJS from "exceljs"
+
+
+const express = require('express');
+const db = require('../db/databases.js');
+const { Parser } = require('json2csv');
+const ExcelJS = require('exceljs');
 
 const router = express.Router();
+
+
 
 router.post("/", (req, res) => {
     const {category, amount, description, date} = req.body;
@@ -90,4 +98,4 @@ router.get("/export/csv",  (req, res) => {
 //     });
 // });
 
-export default router;
+module.exports = router;

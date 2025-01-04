@@ -1,5 +1,6 @@
-import sqlite3 from "sqlite3";
+// import sqlite3 from "sqlite3";
 
+const sqlite3 = require('sqlite3');
 const db = new sqlite3.Database("./db/expenses.db", (err) => {
     if(err) {
         console.error("Error opening database:", err.message);
@@ -21,4 +22,4 @@ const db = new sqlite3.Database("./db/expenses.db", (err) => {
         );
     }
 });
-export default db;
+module.exports = db;
